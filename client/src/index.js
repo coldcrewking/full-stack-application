@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './components/App';
 // import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Edit from "./components/Edit";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+            <Routes>
+                <Route path="/" exact element={<App />} />
+                <Route path="/edit/:id" element={<Edit />} />
+            </Routes>
+        </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

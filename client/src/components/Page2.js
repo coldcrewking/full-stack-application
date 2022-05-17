@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 function Page2(props) {
     return (
       <div className="img-tag">
@@ -5,6 +8,7 @@ function Page2(props) {
         <h4>{props.title}</h4>
         <p>{props.content}</p>
         <button onClick={() => {props.onDelete(props.id)}}>Delete</button>
+        <Link to={{pathname: `/edit/${props.id}`}}><button>Edit</button></Link>
       </div>
     );
   }

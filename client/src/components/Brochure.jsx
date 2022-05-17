@@ -62,8 +62,9 @@ function Brochure(props) {
       <input
         onChange={handleChangeImage}
         type="file"
-        filename="imageFile"
+        name="imageFile"
         placeholder="Upload a photo"
+        accept="image/png, image/jpeg"
       />
       <button onClick={handleClick}>Add</button>
     </form>

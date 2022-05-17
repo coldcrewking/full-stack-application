@@ -44,7 +44,7 @@ function App() {
       console.log("Post has been deleted");
     });
   }
-  
+
   return (
     <div>
       <Header />
